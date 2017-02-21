@@ -1,0 +1,645 @@
+ /*--------------------------------------*/
+ /*Basic setup
+ divide other font size by 20px, mutiple by100
+ and that the pixels for font size of other elements*/
+  /*--------------------------------------*/
+
+/*target all arguments and put margin and padding to zero*/
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+
+}
+
+
+/*With box-sizing: border-box;,
+ we can change the box model 
+  where an element's specified width and height 
+ aren't affected by padding or borders, or amount of text.
+ your trageting all elemments, divs as well */
+ html{
+ 	background-color: #fff;
+ 	color: #555;
+ 	font-family: 'Lato', sans-serif;
+ 	font-size: 20px;
+ 	font-weight: normal;
+ 	
+ }
+.clearfix{zoom:1}
+.clearfix:after{
+	/*no padding between sections 
+	so we use clearfix to solve that issue*/
+	content: ".";
+	clear: both;
+	display: block;
+	height: 0;
+	visibility: hidden;
+	/* class clears float after element
+	the child elemnts li in showcase have float
+	property that needs to be cleared*/
+
+}
+ /*--------------------------------------*/
+ /*Reusable components all over website*/
+  /*--------------------------------------*/
+
+ .row{
+ 	max-width: 1140px;
+ 	margin: 0 auto;
+ }
+ /* centering div called row: top and bottom zero, left rt are auto*/
+ /*Viewport Height.  It is the height of your browser window.  
+ height: 100vh which means 100% of viewpoint or browser
+ use that in case image does not or only fill the top of page*/
+
+section{
+	/*padding not margin to perserve background
+	color so that space is inside adjusted boxes*/
+	padding: 80px 0;
+}
+ .box{
+ 	padding: 1%;
+ }
+
+  h1,
+  h2,
+  h3{
+  
+  	font-weight: 300;
+  	text-transform: uppercase;
+  	
+  }
+  h1{
+  	margin: 0;
+  	color: #fff;
+  	font-size:200%;
+  	word-spacing: 3px;
+  	letter-spacing: 1px;
+  }
+  h2{
+  	font-size:180%;
+  	word-spacing: 2px;
+  	text-align: center;
+  	margin-bottom: 30px;
+  	letter-spacing: 1px;
+
+  }
+  h3{
+  	font-size: 110%;
+  	margin-bottom: 15px;
+  }
+  /*h1 is 200% (which is 40px) percent bigger than
+   the rest of the html page (which is 20px)
+   adjusting the html font size, other font sizes will be
+   proprtional*/
+   /*font weight from 100-700 Defines from thin to thick characters. 400 
+   is the same as normal, and 700 is the same as bold*/
+ h2:after{
+ 	/*there is a block after h2 called :  :after selector inserts something 
+ 	after the content of each selected element(s) in that block*/
+ 	display: block;
+ 	height: 2px;
+ 	background-color: #E87E04;
+ 	/*have to specify content and in this case
+ 	we want no words to appear*/
+ 	content: " ";
+ 	width: 100px;
+ 	margin: 0 auto;
+ 	margin-top: 30px;
+ }
+/*---------------PARAGRAPHS-------------------*/
+
+
+
+.copy{
+	line-height: 145%;
+	/*lets make paragraph not so wide
+	notice how the percentages add up to 100%*/
+	width: 70%;
+	margin-left: 15%;
+	margin-right: 15%;
+}
+.box p{
+	font-size: 90%;
+	line-height: 145%;
+}
+
+/*-----------------icons-----------------*/
+.fa-calendar,
+.fa-clock-o,
+.fa-tree,
+.fa-shopping-cart{
+	font-size: 300%;
+	/*display: block;*/
+	color: #E87E04;
+	margin-bottom: 10px;
+}
+
+.fa-user ,
+.fa-star ,
+.fa-twitter {
+	/*display:inline-block;
+	width: 20px;*/
+	text-align: center;
+	color: #E87E04;
+	/*change size of icon*/
+    font size: 120%;
+    line-height: 120%;
+
+    }
+    i{
+    	margin-right: 20px;
+    }
+    
+
+
+
+/* inline elements side by side do not start a new line
+block elements starts their own line, stack on top of each
+other
+inline-block: does not have a new line break and height
+can be adjusted also width;
+*/
+
+
+/*------LINK----*/
+a:link,
+a:visited{
+	color: #E87E04;
+	text-decoration:none;
+	border-bottom: 1px solid #E87E04;
+	padding-bottom: #E87E04;
+}
+a:hover,
+a:active{
+	color:#555;
+	border-bottom: 1px solid transparent;
+	transition: border-bottom 0.2s; 
+}
+
+ 
+
+ /*------BUTTONS----*/
+ 
+ .btn:link,
+ .btn:visited,
+ input[type=submit]{
+ 	display: inline-block;
+ 	padding: 10px 30px;
+ 	font-weight: 300;
+ 	text-decoration: none;
+ 	border-radius: 200px;
+ 	transition: background-color 0.2s, border 0.2s, color 0.2s;
+ 	
+ }
+ /*Displays an element 
+ as an inline-level block container.
+ 	text-decoration: none;   gets rid of 
+ 	underline for the hyperlink*/
+
+ 	/*
+    a:link - a normal, unvisited link
+    a:visited - a link the user has visited
+    a:hover - a link when the user mouses over it
+    a:active - a link the moment it is clicked
+*/
+/*E87E04 is a lighter shade of orange and #D35400 is
+darker from flatuicolorpicker.com*/
+
+/*how it works in CSS: the transition  
+property has to be placed in the style 
+for the original state of the element. In this
+ case, it's in the :link  and :visited  state. */
+ 	.btn-full:link,
+ 	.btn-full:visited,
+ 	input[type=submit]{
+ 		background-color: #E87E04;
+ 		border: 1px solid #E87E04;
+ 		color: #fff;
+ 		margin-right: 15px;
+
+ 	}
+ 	.btn-ghost:link,
+ 	.btn-ghost:visited{
+ 		border: 1px solid #E87E04;
+ 		color:#E87E04;
+ 	}
+ 	/*When setting the style for several link states, there are some order rules:
+
+    a:hover MUST come after a:link and a:visited
+    a:active MUST come after a:hover
+*/
+
+ 	.btn:hover,
+ 	.btn:active,
+ 	input[type=submit]:hover,
+ 	input[type=submit]:active{
+		background-color: #D35400;
+		
+ 	}
+   
+   /*.btn-full:hover,
+ 	.btn-full:active{
+ 		
+ 		border: 1px solid #D35400;
+ 		
+
+ 	}*/
+ 	.btn-ghost:hover,
+ 	.btn-ghost:active{
+ 		border: 1px solid #E87E04;
+ 		color:#fff ;
+ 	}
+
+ 	/*--------------------------------------*/
+ /*header*/
+  /*--------------------------------------*/
+ header{
+ 	background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("img/hero.jpg");
+ 	/*just say folder/image name do not include outer folders*/
+ 	height: 100vh;
+ 	background-size: cover;
+ 	background-position: center;
+ 	background-attachment: fixed;
+ 	 
+ /*got the image from resources /css/ img folder*/
+ /*image was on part where there was content to fix it
+  height: 100vh;*/
+  /* added linear gradient affect so bacground is black
+  but transparent on top of hero image.
+  linear gradient needs 2 colors so thats why its repeated*/
+}
+
+  .hero-text-box {
+  	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%,-50%);
+
+  }
+
+  /* transofrmation is, 50 percent up and left*/
+  /* need to vertically and horizontally center it
+  so, position: absolute; 
+  transform: translate(-50%,-50%); means 50% left amd 50% up*/
+  .logo{
+  	height: 100px;
+  	width: auto;
+  	float: left;
+  }
+  .main-nav{
+  	float: right;
+  	list-style: none;
+  	margin-top: 55px;
+  }
+.main-nav li{
+	display:inline-block;
+	margin-left: 40px;
+}
+/*want elements side by side,
+ so display: inline-block;*/
+.main-nav li a:link,
+.main-nav li a:visited{
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 90%;
+	border-bottom: 2px solid transparent;
+	transition: 0.2s;
+}
+/*transparent makes the border not appear until
+you hover on it*/
+/* ornage border wont be visible becuase
+ its transparemt until we hover it*/
+/*18px/20px=0.9
+times 100= 90%*/
+.main-nav li a:hover,
+.main-nav li a:active{
+	border-bottom: 2px solid #E87E04;
+	
+	padding: 8px 0;
+}
+
+/*--------------------------------------*/
+ /* FEATURES class*/
+  /*--------------------------------------*/
+
+.features .copy{
+	margin-bottom: 40px;
+}
+
+
+/*--------------------------------------*/
+ /* meals*/
+  /*--------------------------------------*/
+
+.meals{
+	/*section meals had a huge white space
+	between section, to fix this  made padding 0;*/
+	padding: 0;
+}
+  .meals-showcase{
+  	list-style: none;
+  	/*want it to take up 100% of browser so do
+  	width: 100%*/
+  	width: 100%;
+  }
+  .meals-showcase li{
+  	display: inline;
+  	float: left;
+  	/* must be 25% because 4*25=100 and they will
+  	be side by side*/
+  	width: 25%;
+
+  }
+  .meal-photo{
+  	width: 100%;
+  	margin:0;
+
+  	/*
+  	when enlarged with transform: scale(1.15); below
+  	images are bigger than container
+  	 dont want img to be 
+  	bigger than container or browser, figure
+  	when img overflows cpntainer use overflow:hidden*/
+  	overflow: hidden;
+  	background: #000;
+  	/*set mutiple images to black in .meal-photo*/
+  }
+  .meal-photo img{
+  	opacity: 0.7;
+    
+  	width: 100%;
+  	/*img will be as wide as the figure
+  	 container
+  	height: auto;*/
+  	transform: scale(1.15);
+  	/*img 115% bigger*/
+  	transition: transform 0.5s, opacity 0.5s;
+  }
+  .meal-photo img:hover{
+  	transform: scale(1.03);
+  	/*why 1.03? when it decrease in size,
+  	transform: scale(1) there was a white space at
+  	bottom, */
+  	
+  	opacity: 1;
+  }
+
+  /*--------------------------------------*/
+ /* 		HOW IT WORKS SECTION*/
+  /*--------------------------------------*/
+  
+
+.steps{
+	background-color: #f4f4f4;
+	/*very light grey*/
+}
+.steps-box: first-child{
+	text-align: right;
+	/* works for text and inline elemnets like img*/
+	padding: 3%;
+	/* Responsive web design:
+	layout must be fluid, adpatable to all
+	screen sizes that why we use percentges instead
+	of restrictive pixels that are not adapatble to screen
+	sizes (ipad, phones, computers)*/
+	margin-top: 30px;
+}
+.steps-box: last-child{
+	/*android img is last child element*/
+	padding-left: 3%;
+	margin-top: 70px;
+}
+.app-screen{
+	width: 40%;
+	margin-left: 50px;
+}
+.works-steps{
+	margin-bottom: 50px;
+	margin-right: 50px;
+}
+.works-steps div{
+	color:#E87E04 ;
+	border: 2px solid #E87E04;
+	display: inline-block;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	padding: 5px;
+	float: left;
+	font-size: 150%;
+	margin-right: 25px;
+	/**/
+
+}
+.btn-app:link,
+.btn-app:visited{
+	border-bottom: 0;
+	/*gets rid of ornage borders*/
+}
+.btn-app img{
+	height: 50px;
+	width: auto;
+	margin-right: 10px;
+}
+
+
+/*--------------------------------------*/
+ /* CITIES*/
+  /*--------------------------------------*/
+  .box img{
+  	/* want image to be wide as .box so
+  	width: 100%;*/
+  	width: 100%;
+  	height: auto;
+  	margin-bottom: 15px;
+  }
+  .city-feature{
+  	margin-bottom: 5px;
+  	/*bottom spacing between content after icons*/
+  }
+
+
+  /*--------------------------------------*/
+ /* TESTIMONIALS
+  /*--------------------------------------*/
+
+.testimonials{
+	background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(img/back-customers.jpg);
+	/*want background to fill whole pg*/
+	/*The path img/back-customers.jpg  is relative to
+	 the CSS file. the style.css file is in resources/css/ */
+
+	background-size: cover;
+	color: #fff;
+	background-attachment: fixed;
+}
+
+blockquote{
+	padding-bottom: 2%;
+	/*need spacing bewtween colums*/
+	font-style: italic;
+	line-height: 145%;
+	margin-top: 40px;
+}
+
+/*The ::before pseudo-element can be used to insert 
+some content before the content of an element.
+opposite with ::after*/
+
+blockquote:before {
+ content:"\201C";
+ font-size: 500%;
+ display: block;
+ top: 5px;
+}
+cite{
+	font-size: 90%;
+	margin-top: 25px;
+	/*text was next to picture instead of
+	stacking on top of it and being
+	on its own line so used display:block*/
+	display:block;
+}
+cite img{
+	height: 50px;
+	border-radius: 50%;
+	/*aligns text to be vertically in middle*/
+	vertical-align: middle;
+}
+/*--------------------------------------*/
+ /* TESTIMONIALS
+  /*--------------------------------------*/
+
+.plans{
+	background-color: #f4f4f4;
+}
+.plan-box{
+	background-color: #fff;
+	border-radius: 5px;
+	/*90% of parent element*/
+	width: 90%;
+
+}
+.plan-box div{
+	
+	border-bottom: 1px solid #d1c7db;
+}
+.price-per-month{
+	font-size: 300%;
+	margin-bottom: 10px;
+	
+	color: #D35400;
+}
+.price-per-meal{
+font-size: 80%;
+}
+.plan-box ul{
+	list-style: none;
+}
+.plan-box ul{
+	padding: 5px 0;
+	/* zero on sides 5px up and down*/
+}
+.plan-box div:last-child{
+	text-align: center;
+}
+.fa-check, .fa-times {
+	/*display:inline-block;
+	width: 20px;*/
+	text-align: center;
+	color: #E87E04;
+	/*change size of icon*/
+    font size: 120%;
+    line-height: 145%;
+
+    }
+    /*--------------------------------------*/
+ /* CONTACT FORM
+  /*--------------------------------------*/
+
+.contact-form{
+	width: 60%;
+	margin: 0 auto;
+
+  }
+
+  input[type=text],
+  input[type=email],
+  select,
+  textarea{
+  	width: 100%;
+  	/*want elemrnts to fill whole column*/
+  	border-radius: 5px;
+  }
+/*selecting input elements
+ with type text and email*/
+ textarea{
+ 	height: 100px;
+ }
+
+
+ /*--------------------------------------*/
+ /* 	FOOTER
+  /*--------------------------------------*/
+
+  footer{
+  	background-color: #333;
+  	font-size: 80%;
+  	padding: 50px;
+  }
+  footer ul{
+  	list-style: none;
+  	float: left;
+  }
+  .social-links{
+  	list-style: none;
+  	float: right;
+  }
+
+  footer ul li,
+  .social-links li{
+  	display: inline-block;
+  	margin-right: 20px;
+  }
+  footer ul li a:link,
+  footer ul li a:visited,
+  .social-links li a :link,
+  .social-links li a :visited{
+  	text-decoration: none;
+  	border: 0;
+  	/*color: #888;*/
+  	transition: color, 0.2s;
+  }
+ 
+  footer ul li a:hover,
+  footer ul li a:active
+  {
+  	color: #ddd;
+  }
+  footer p{
+  	color: #888;
+  	text-align: center;
+  	
+  	margin-top: 20px;
+  }
+  .social-links li a:link,
+  .social-links li a:visited{
+  	font-size: 160%;
+  }
+  .fa-facebook:hover{
+  	color: #3b5998;
+  }
+  .fa-twitter:hover{
+  	color: #55acee;
+  }
+
+  .fa-google-plus-official:hover{
+  	color:  #dd4b39;
+  }
+  .fa-instagram:hover{
+  	color: #125688;
+  }
