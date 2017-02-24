@@ -1,0 +1,110 @@
+
+
+@media only screen and (max-width: 1200px){
+	/* rules with browser width
+	from big tabelt from to 1200px*/
+	.hero-text-box{
+		width: 100%;
+		padding: 0 2%;
+	}
+	.row{padding: 0 2%;} 
+	/*this helps sign up! text from 
+	getting cut off*/
+   
+}
+
+
+@media only screen and (max-width: 1023px){
+	/*ipad in portait mode
+	from small tablrt to big one
+	768px-1023px*/
+	body{font-size: 18px;}
+	section{padding: 60px 0;}
+	.copy{ 
+
+	/*lets make paragraph not so wide
+	notice how the percentages add up to 100%*/
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+		}
+		.steps-box{
+			margin-top: 10px;
+			/*gets rid of white space*/
+		}
+		.works-steps{
+			margin-bottom: 50px;
+		}
+		.app-screen{
+	width: 50%;
+	
+	}
+	.city-feature{
+		font-size: 90%;
+	}
+	i{
+    	margin-right: 5px;
+    	width: 17px;
+    }
+    .plan-box{
+    	width: 100%;
+    	margin-left: 0;
+    	
+    }
+    .plan-box .price-per-month{
+    	font-size: 250%;
+    }
+    .contact-form{
+    	width: 80%;
+    	/*width increased*/
+    }
+}
+
+
+@media only screen and (max-width: 767px){
+	/* rules below apply tobrowser width which
+	 are from 481 to to 767
+	so this  small phones to small tablets*/
+	body{ font-size: 16px; }
+	section{padding: 30px 0;}
+	.row,
+	.hero-text-box{padding: 0 4%;}
+	/*row and hero text box in header
+	padding 0 top and bottom and 4% left and rt*/
+	.col{
+		width: 100%;
+		/*columns are stacked on top ofeach
+		other at 100%*/
+	}
+	.main-nav{display: none;}
+	.copy{ width: 100%; }
+	h1{font-size: 180%;}
+	h2{font-size: 150%;}
+	.works-steps{
+			margin-bottom: 30px;
+			/*gets rid of white space*/
+		}
+		.works-steps:last-of-type{
+			margin-bottom: 20px;
+			/*gets rid of white space*/
+		}
+		.steps-box:first-child{text-align: center;}
+		.app-screen{width: 40%;}
+		.works-steps div{
+			height: 40px;
+			width: 40px;margin-right: 25px;
+			padding: 4px;
+			font-size: 120%;
+		}
+	
+}
+
+
+@media only screen and (max-width: 480px){
+	/*applies to width of screen 0-480
+	for small phone*/
+	section{padding: 25px 0;}
+	.contact-form{
+		width: 100%;
+	}
+}

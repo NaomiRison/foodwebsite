@@ -18,12 +18,15 @@
   where an element's specified width and height 
  aren't affected by padding or borders, or amount of text.
  your trageting all elemments, divs as well */
- html{
+ html,
+ body{
  	background-color: #fff;
  	color: #555;
  	font-family: 'Lato', sans-serif;
  	font-size: 20px;
  	font-weight: normal;
+ 	/*helps spread the bacground to the left side*/
+ 	overflow-x: hidden;
  	
  }
 .clearfix{zoom:1}
@@ -643,3 +646,5 @@ font-size: 80%;
   .fa-instagram:hover{
   	color: #125688;
   }
+
+  
