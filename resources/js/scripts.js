@@ -1,4 +1,4 @@
 
-	$("h1").on("click", function(){
-		$(this).css("background-color","#ff0000");
-	});
+	// $("h1").on("click", function(){
+	// 	$(this).css("background-color","#ff0000");
+	// });
