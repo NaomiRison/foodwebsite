@@ -18,12 +18,13 @@
 <body>
 	<header>
 	 		<!-- add a nav for the logo -->
-	 		<nav>
+	 		<nav >
 	 		<!-- the row is to center elements in the viewport. -->
 	 			<div class="row">
 	 				<!-- logo goes here -->
 	 				<!-- The alt attribute provides alternative information for an image if a user for some reason cannot view it -->
 	 				<img src="resources/img/logo-white.png" alt="foodwebsite logo" class="logo">
+	 				<img src="resources/img/logo.png" alt="foodwebsite logo" class="logo-black">
 	 				<ul class="main-nav">
 	 					<li><a href="#food-delivery">Food delivery</a></li>
 	 					<li><a href="#how-it-works">How it works</a></li>
@@ -44,7 +45,8 @@
 
 		</div>
 	</header>
-	<section class="features" id="food-delivery">
+	<section class="features js-features" id="food-delivery"
+	>
 
 
 		<div class="row">
@@ -550,7 +552,8 @@
 
    <!--  js cdn called after web page loads -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
+     <script src="vendors/js/jquery.waypoints.min.js"></script>
+	
 	<script type="text/javascript" src="resources/js/scripts.js"></script>
 </body>
 </html>
