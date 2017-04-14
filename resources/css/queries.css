@@ -92,10 +92,12 @@
 		.app-screen{width: 40%;}
 		.works-steps div{
 			height: 40px;
-			width: 40px;margin-right: 25px;
+			width: 40px;
+			margin-right: 25px;
 			padding: 4px;
 			font-size: 120%;
 		}
+		
 	
 }
 
@@ -107,4 +109,5 @@
 	.contact-form{
 		width: 100%;
 	}
+	
 }

@@ -31,7 +31,7 @@
  }
 .clearfix{zoom:1}
 .clearfix:after{
-	/*no padding between sections 
+	/*no padding between section how it works
 	so we use clearfix to solve that issue*/
 	content: ".";
 	clear: both;
@@ -99,11 +99,11 @@ section{
    /*font weight from 100-700 Defines from thin to thick characters. 400 
    is the same as normal, and 700 is the same as bold*/
  h2:after{
- 	/*there is a block after h2 called :  :after selector inserts something 
+ 	/*there is a block or conatiner after h2 called :  :after selector inserts something 
  	after the content of each selected element(s) in that block*/
  	display: block;
  	height: 2px;
- 	background-color: #E87E04;
+ background-color: #E87E04;
  	/*have to specify content and in this case
  	we want no words to appear*/
  	content: " ";
@@ -118,7 +118,7 @@ section{
 .copy{
 	line-height: 145%;
 	/*lets make paragraph not so wide
-	notice how the percentages add up to 100%*/
+	notice how the percentages add up to 100% below*/
 	width: 70%;
 	margin-left: 15%;
 	margin-right: 15%;
@@ -227,6 +227,7 @@ for the original state of the element. In this
  	.btn-ghost:visited{
  		border: 1px solid #E87E04;
  		color:#E87E04;
+    /*notice no bakground color*/
  	}
  	/*When setting the style for several link states, there are some order rules:
 
@@ -253,6 +254,7 @@ for the original state of the element. In this
  	.btn-ghost:active{
  		border: 1px solid #E87E04;
  		color:#fff ;
+    /*text turns white*/
  	}
 
  	/*--------------------------------------*/
@@ -276,6 +278,9 @@ for the original state of the element. In this
 
   .hero-text-box {
   	position: absolute;
+    /* need properties below so position is not static
+    absolute puts element exactly where you want it to be
+    by spcifying left and top*/
   	top: 50%;
   	left: 50%;
   	transform: translate(-50%,-50%);
@@ -400,12 +405,14 @@ times 100= 90%*/
   .meals-showcase li{
   	display: inline;
   	float: left;
-  	/* must be 25% because 4*25=100 and they will
+  	/* must be 25% because 4 pic per row*25=100 and they will
   	be side by side*/
   	width: 25%;
 
   }
   .meal-photo{
+    /*pics in lis will take up whole li space
+    and have space between them*/
   	width: 100%;
   	margin:0;
 
@@ -421,6 +428,7 @@ times 100= 90%*/
   }
   .meal-photo img{
   	opacity: 0.7;
+    /*dark picture*/
     
   	width: 100%;
   	/*img will be as wide as the figure
@@ -437,6 +445,7 @@ times 100= 90%*/
   	bottom, */
   	
   	opacity: 1;
+    /*no darkness*/
   }
 
   /*--------------------------------------*/
@@ -480,6 +489,7 @@ times 100= 90%*/
 	width: 50px;
 	height: 50px;
 	text-align: center;
+  /*now centered in orange circle*/
 	padding: 5px;
 	float: left;
 	font-size: 150%;
@@ -544,6 +554,7 @@ opposite with ::after*/
 
 blockquote:before {
  content:"\201C";
+ /*code for camma*/
  font-size: 500%;
  display: block;
  top: 5px;

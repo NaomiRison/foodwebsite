@@ -10,7 +10,7 @@
 /*  GROUPING  ============================================================================= */
 
 .row {
-    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+    zoom: 1;  /*For IE 6/7 (trigger hasLayout) */
 }
 
 .row:before,
@@ -26,6 +26,8 @@
 
 .col {
 	display: block;
+	/*colums have their own line until the float
+	has each element float to the left*/
 	float:left;
 	margin: 1% 0 1% 1.6%;
 }
