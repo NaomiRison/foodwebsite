@@ -77,6 +77,47 @@
 		other at 100%*/
 	}
 	.main-nav{display: none;}
+	/*we want bars to show up now*/
+	.mobile-nav{display: inline-block;}
+	/*now define what happens when we click on bars
+	button, back to script.js file!*/
+	.main-nav{float: left;}
+	.main-nav li {
+		display: block;
+		
+		margin-top: 7%;
+		
+	}
+	.main-nav li a:link,
+	.main-nav li a:visited{
+		border:0;
+		/*border does not show up for regualar
+		or sticky nav*/
+		display: block;
+		font-size: 100%;
+
+		}
+
+		/*sticky nav bar links*/
+.sticky .main-nav li a:link,
+ .sticky .main-nav li a:visited{
+  color: #555;
+  padding: 10px 0;
+  }
+  
+ .sticky .main-nav{
+  margin-top: 10px;
+}
+/*now make bars black in stick class because cant 
+see it when you scroll down*/
+.sticky .mobile-nav .fa-bars{
+	color: black;
+}
+
+
+
+
+
 	.copy{ width: 100%; }
 	h1{font-size: 180%;}
 	h2{font-size: 150%;}
@@ -108,6 +149,9 @@
 	section{padding: 25px 0;}
 	.contact-form{
 		width: 100%;
+	}
+	.hero-text-box{
+		margin-top: 30px;
 	}
 	
 }

@@ -8,6 +8,7 @@
 	  <!-- link normalize.css cdn from https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css -->
 	  <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
 	  <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+	  <link rel="stylesheet" type="text/css" href="vendors/css/animate.min.css">
 	  <!-- font awesome -->
 	  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	  <link rel="stylesheet" type="text/css" href="resources/css/style.css">
@@ -32,6 +33,10 @@
 	 					<li><a href="signup.html">Sign up!</a></li>
 	 					
 	 				</ul>
+	 				<a  class="mobile-nav"><i class="fa fa-bars" aria-hidden="true"></i>
+	 				
+
+					</a>
 	 			</div>
 	 		</nav>
 			<!-- where we put logo,title, navgation
@@ -39,8 +44,8 @@
 		<div class="hero-text-box">
 			<h1>Goodbye junk food.<br> Hello super healthy meals.</h1>
 			<!-- The <br> tag inserts a single line break. -->
-			<a class="btn btn-full js-scroll-to-plans" href="#im-hungry">I’m hungry </a>
-			<a class="btn btn-ghost js-scroll-to-food-delivery" href="#food-delivery">show me more </a>
+			<a class="btn btn-full " href="#im-hungry">I’m hungry </a>
+			<a class="btn btn-ghost " href="#food-delivery">show me more </a>
 
 
 		</div>
@@ -58,7 +63,7 @@
 				Hello, we’re Omnifood, your new premium food delivery service. We know you’re always busy. No time for cooking. So let us take care of that, we’re really good at it, we promise!
 			</p>
 		</div>
-		<div class="row">
+		<div class="row js-waypoint-1">
 		 	<!-- classes from grid.css -->
 			<div class="col span-1-of-4 box">
 				<i class="fa fa-calendar" aria-hidden="true"></i>
@@ -97,7 +102,7 @@
 			<li>
 				<figure class="meal-photo">
 					<!-- container that contains image and caption -->
-					<img src="resources/img/1.jpg" alt="Korean bibimbap with egg and vegetables">
+					<img src="resources/img/1.jpg" alt="Korean bibimbap with egg and vegetables" >
 				</figure>
 			</li>
 			<li>
@@ -158,7 +163,7 @@
 		</div>
 		<div class="row">
 			<div class=" col span-1-of-2 steps-box">
-				<img src="resources/img/app-iPhone.png" alt="omnifood app on iPhone" class="app-screen">
+				<img src="resources/img/app-iPhone.png" alt="omnifood app on iPhone" class="app-screen js-waypoint-2">
 			</div>
 			<div class="col span-1-of-2 steps-box">
 				<div class="works-steps">
@@ -184,7 +189,7 @@
 			<h2>We're currently in these cities</h2>
 			<!-- placed in row to center it -->
 		</div>
-		<div class="row">
+		<div class="row js-waypoint-3">
 			<div class=" col span-1-of-4 box">
 				<!-- because we have  4 columns -->
 				<img src="resources/img/lisbon-3.jpg" alt="Lisbon">
@@ -299,7 +304,7 @@
    		<div class="row">
    			<div class=" col span-1-of-3">
    				<!-- another div inside col -->
-   				<div class="plan-box">
+   				<div class="plan-box js-waypoint-4">
    					<div>
    					<!-- plan 1 -->
    						<h3>

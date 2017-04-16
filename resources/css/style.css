@@ -160,7 +160,7 @@ section{
 
 /* inline elements side by side do not start a new line
 block elements starts their own line, stack on top of each
-other
+other CANT adjust heght or width
 inline-block: does not have a new line break and height
 can be adjusted also width;
 */
@@ -377,6 +377,29 @@ times 100= 90%*/
  .sticky .main-nav{
   margin-top: 18px;
 }
+
+/*--------------------------------------*/
+ /* MOBILE nav*/
+  /*--------------------------------------*/
+
+
+.mobile-nav{
+  float: right;
+  margin-top: 5%;
+  /*margin-top:30px;*/
+  cursor: pointer;
+  /*cursor: pointer is used so that
+  when we ahover over bars, theres a pointer
+  like all the other links*/
+  display: none;
+  /*dsiplay none is used because it shows with 
+  the screen enlarged */
+}
+.mobile-nav .fa-bars{
+  font-size: 200%;
+  color: white;
+}
+
 
 /*--------------------------------------*/
  /* FEATURES class*/
@@ -705,6 +728,29 @@ font-size: 80%;
   }
   .fa-instagram:hover{
   	color: #125688;
+  }
+
+  /*--------------------------------------*/
+ /* ANIMATIONS
+  /*--------------------------------------*/
+  
+  .js-waypoint-1,
+  .js-waypoint-2,
+  .js-waypoint-3{
+    opacity: 0;
+    /*element is not visible
+    once the class has abimated class we want
+    the opacity back to 1*/
+    animation-duration: 1s;
+  }
+  .js-waypoint-1.animated,
+  .js-waypoint-2.animated,
+  .js-waypoint-3.animated{
+    opacity: 1;
+
+  }
+  .js-waypoint-4{
+     animation-duration: 1s;
   }
 
   

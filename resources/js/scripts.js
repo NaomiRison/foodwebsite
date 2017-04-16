@@ -32,7 +32,7 @@ scroll on buttons
 need classes for buttons
 
 */
-$(".js-scroll-to-plans").on("click",function(){
+$(".btn-full").on("click",function(){
 
 	// animated scroll select html and body
 	//then use animate emthod
@@ -45,7 +45,7 @@ $(".js-scroll-to-plans").on("click",function(){
 	// in 1 second
 	});
 
-$(".js-scroll-to-food-delivery").on("click",function(){
+$(".btn-ghost").on("click",function(){
 
 	
 	$("html,body").animate({scrollTop:$(".js-features").offset().top},1000);
@@ -71,3 +71,53 @@ $(function() {
     }
   });
 });
+
+/*   animate on scroll   */
+$(".js-waypoint-1").waypoint(function(direction){
+// needs to be invisble first to fade in
+	$(".js-waypoint-1").addClass("animated fadeIn");
+
+},{offset: "50%"
+	});
+
+$(".js-waypoint-2").waypoint(function(direction){
+// needs to be invisble first to fade in
+	$(".js-waypoint-2").addClass("animated fadeInUp");
+
+},{offset: "50%"
+	});
+
+$(".js-waypoint-3").waypoint(function(direction){
+// needs to be invisble first to fade in
+	$(".js-waypoint-3").addClass("animated fadeIn");
+
+},{offset: "50%"
+	});
+
+$(".js-waypoint-4").waypoint(function(direction){
+// needs to be invisble first to fade in
+	$(".js-waypoint-4").addClass("animated pulse");
+
+},{offset: "50%"
+	});
+
+$(".mobile-nav").on("click",function(){
+
+	var nav=$(".main-nav");
+	// 200 mili seconds
+	nav.slideToggle(200);
+
+	var icon=$(".mobile-nav i");
+	if(icon.hasClass(".fa-bars")){
+		icon.addClass(".fa-times");
+		icon.removeClass(".fa-bars");
+
+	}else{
+		icon.removeClass(".fa-times");
+		icon.addClass(".fa-bars");
+
+	}
+
+});
+
+
